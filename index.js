@@ -1,1 +1,1 @@
-module.exports = require("./src/everws")
+module.exports = require("./everws")

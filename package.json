@@ -8,7 +8,7 @@
     "mocha": "^2.3.4"
   },
   "scripts": {
-    "test": "mocha src --recurisve --no-exit"
+    "test": "mocha everws-test.js --no-exit"
   },
   "dependencies": {
     "backoff": "^2.4.1",
