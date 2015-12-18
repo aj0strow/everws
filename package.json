@@ -1,5 +1,15 @@
 {
   "private": true,
   "name": "everws",
-  "author": "@aj0strow"
+  "author": "@aj0strow",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "scripts": {
+    "test": "mocha src --recurisve --no-exit"
+  },
+  "dependencies": {
+    "backoff": "^2.4.1",
+    "ws": "^0.8.1"
+  }
 }
