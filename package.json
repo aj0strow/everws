@@ -1,6 +1,6 @@
 {
-  "private": true,
   "name": "everws",
+  "version": "0.0.1",
   "author": "@aj0strow",
   "main": "index.js",
   "license": "MIT",
