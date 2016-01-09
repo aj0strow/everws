@@ -1,4 +1,4 @@
-var EventEmitter = require("events").EventEmitter
+var EventEmitter = require("events")
 var util = require("util")
 var backoff = require("backoff")
 var WebSocket = require("ws")
