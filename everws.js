@@ -123,7 +123,9 @@ events.forEach(function (event) {
     configurable: true,
     set: function (func) {
       this.removeAllListeners(event)
-      this.on(event, func)
+      if (func) {
+        this.on(event, func)
+      }
     }
   })
 })

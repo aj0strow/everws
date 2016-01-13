@@ -100,6 +100,29 @@ describe("websocket", function () {
     }
   })
   
+  it("should replace property events", function (done) {
+    var s = new WebSocketServer({ port: this.port })
+    var ws = new WebSocket("ws://localhost:" + this.port)
+    
+    ws.onmessage = function () {
+      done(new Error("this should not happen"))
+    }
+    
+    ws.onmessage = null
+    
+    s.on("connection", function (ws) {
+      ws.send("whats up")
+    })
+    
+    ws.onopen = function () {
+      setTimeout(function () {
+        ws.close()
+        s.close()
+        done()
+      }, 5)
+    }
+  })
+  
   it("should copy over constants", function () {
     assert.equal(WebSocket.CONNECTING, 0)
     assert.equal(WebSocket.OPEN, 1)
